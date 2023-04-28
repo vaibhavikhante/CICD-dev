@@ -1,0 +1,6 @@
+FROM python:latest
+MAINTAINER itdesigns
+RUN apt-get update
+COPY number-guessing-game-two-player.py /home
+CMD ["python","/home/number-guessing-game-two-player.py"]
+

@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  backend:
+    build: 
+      dockerfile: Dockerfile.txt
+      args:
+        port: 80
+    image: number-guessing-game-two-player:latest
+    command: python number-guessing-game-two-player.py
+    ports:
+      - "8000:80"
+    container_name: number-guessing-game-two-player
+  frontend:
+    image: httpd:latest
+    ports:
+       - 80:80
+    
+    
+
